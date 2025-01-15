@@ -71,5 +71,7 @@ b) it counts the amount of equal states in a row, and if this number excedes the
 
 The if statement only returns "The traffic light works properly." if all transitions are valid, and the the maximum number of states in a row in the data does not exceed the stuck_threshold.
 
+*Please note:* I provided an additional line of code with an example of data which repeats the yellow state exceeding a threshold of 10, to check the functionality of the function.
+
 ## Results:
 Given the data sample (traffic_light_data)  we can conclude that the traffic light works correctly. 
