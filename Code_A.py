@@ -19,18 +19,16 @@ green = [0, 0, 1, 0]
 green_left = [0, 0, 0, 1]
 no_light_on = [0, 0, 0, 0]
 
-#pattern_a = [red, yellow, green, yellow, red]
-#pattern_b = [red, yellow, green_left, green, yellow, red]
-
 # Creating a rule-based dictionary for valid transitions, knowing that the only allowed sequences are:
 # red, yellow, green, yellow, red 
 # red, yellow, green_left, green, yellow, red
+# ONLY green and green_left blink
 rule_set = {
-    tuple(red): [tuple(yellow), tuple(no_light_on), tuple(red)],
-    tuple(yellow): [tuple(green), tuple(red), tuple(green_left), tuple(no_light_on), tuple(yellow)],
+    tuple(red): [tuple(yellow), tuple(red)],
+    tuple(yellow): [tuple(green), tuple(red), tuple(green_left), tuple(yellow)],
     tuple(green): [tuple(yellow), tuple(no_light_on), tuple(green)],
     tuple(green_left): [tuple(green), tuple(no_light_on), tuple(green_left)],
-    tuple(no_light_on): [tuple(red), tuple(yellow), tuple(green), tuple(green_left), tuple(no_light_on)]
+    tuple(no_light_on): [tuple(yellow), tuple(green), tuple(green_left), tuple(no_light_on)]
            }
 
 # Creating the final for loop which determines if the traffic light works
