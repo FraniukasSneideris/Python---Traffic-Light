@@ -70,3 +70,6 @@ a) it compares the data with the permitted rules, and determines if all sequence
 b) it counts the amount of equal states in a row, and if this number excedes the stuck_threshold, it stops the for loop and returns "The traffic light might be getting stuck on *color*". 
 
 The if statement only returns "The traffic light works properly." if all transitions are valid, and the the maximum number of states in a row in the data does not exceed the stuck_threshold.
+
+## Results:
+Given the data sample (traffic_light_data)  we can conclude that the traffic light works correctly. 
