@@ -27,11 +27,9 @@ The analysis needs to be done using Python.
 
    If the total time the traffic light stays in red state is 30 seconds, and the camera takes the picture from the moment the light turns red, then most probably in the data 6 consecutive red states will be recorded.
 
-6) *Also, sometimes between states transitions, no light will be recorded. This is because the traffic light blinks.*
+6) *The traffic light blinks only for the two green states.*
 
-   For example:
-
-   ... Red - Red - No Light On - Red - Yellow - ...
+   This means, that it is possible to get no_light_on between the greens, and between a green and yellow.
 
 ## The challenge: *Creating an applicable python code, which determines if the traffic light works correctly*
 ### General approach:
