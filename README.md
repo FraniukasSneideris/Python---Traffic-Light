@@ -41,7 +41,7 @@ The general idea of the code is the following:
 ## The Code
 This code is a for loop function which compares the data with a dictionary containing the possible light switches (based on the correct patterns defined before), and returns either "Traffic light works" or "Traffic light does not work", and if it traffic light does not work, it also returns the index and color codes of the invalid transition found. 
 
-**PLEASE NOTE**: The "analyze_traffic_light_pytest.py" requires of previous pytest module installation to run.
+**PLEASE NOTE**: The "analyze_traffic_light_pytest.py" file requires of previous pytest module installation to run.
 
 ## Results:
 Given the data sample (traffic_light_data)  we can conclude that the traffic light works correctly. 
