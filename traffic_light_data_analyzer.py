@@ -15,7 +15,7 @@ rule_set = {
 def main(file_path):
     data = open_file(file_path)
     traffic_light_data = process_data(data)
-    test_traffic_light(traffic_light_data)
+    analyze_traffic_light(traffic_light_data)
 
 # Opening the file
 def open_file(file):
@@ -37,7 +37,7 @@ def process_data(data):
 traffic_light_data = process_data(data)
 
 # Testing the traffic light
-def test_traffic_light(traffic_light_data):
+def analyze_traffic_light(traffic_light_data):
     for i in range(0, len(traffic_light_data) - 1):
         current_state = tuple(traffic_light_data[i])
         next_state = tuple(traffic_light_data[i + 1])
@@ -48,7 +48,7 @@ def test_traffic_light(traffic_light_data):
     print("Traffic light works!")
 
 # Calling the final function to test the traffic light:
-test_traffic_light(traffic_light_data)
+analyze_traffic_light(traffic_light_data)
 
 if __name__ == "__main__":
     main("traffic_light_data.txt")
