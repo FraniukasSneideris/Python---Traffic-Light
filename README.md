@@ -38,7 +38,7 @@ The general idea of the code is the following:
   2) Define a rule dictionary which contains the valid transitions based on the acceptable sequences of a working traffic light.
   3) Define a for loop function which compares the data with the valid transitions, and therefore determines if the traffic light works.  
 
-### The Code
+## The Code
 This code is a for loop function which compares the data with a dictionary containing the possible light switches (based on the correct patterns defined before), and returns either "Traffic light works" or "Traffic light does not work", and if it traffic light does not work, it also returns the index and color codes of the invalid transition found. 
 
 ## Results:
