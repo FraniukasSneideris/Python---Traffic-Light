@@ -34,9 +34,6 @@ def test_traffic_light_invalid_sequence():
 
 
 def main():
-    """
-    Run the tests using pytest and display the results in the console.
-    """
     print("Executing tests with pytest...")
     pytest.main(["-v", "analyze_traffic_light_pytest.py"])
 
