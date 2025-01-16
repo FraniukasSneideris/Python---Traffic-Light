@@ -1,4 +1,4 @@
-# traffic_light_data_analyzer.py
+# analyze_traffic_light_ANALYZER.py
 
 # Creating a rule-based dictionary for valid transitions, knowing that the only allowed sequences are:
 # red, yellow, green, yellow, red
