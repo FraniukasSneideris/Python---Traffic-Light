@@ -31,3 +31,15 @@ def test_traffic_light_invalid_sequence():
 
     with pytest.raises(AssertionError):
         analyze_traffic_light(invalid_traffic_light_data)
+
+
+def main():
+    """
+    Run the tests using pytest and display the results in the console.
+    """
+    print("Executing tests with pytest...")
+    pytest.main(["-v", "analyze_traffic_light_pytest.py"])
+
+
+if __name__ == "__main__":
+    main()
