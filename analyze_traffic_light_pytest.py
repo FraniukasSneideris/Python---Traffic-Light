@@ -1,13 +1,13 @@
 import pytest
-from analyze_traffic_light_analyzer import process_data, analyze_traffic_light
+from analyze_traffic_light import process_traffic_light_data, analyze_traffic_light
 
 
-# Test for process_data()
-def test_process_data():
+# Test for process_traffic_light_data()
+def test_process_traffic_light_data():
     data = ["1,0,0,0\n", "0,1,0,0\n", "0,0,1,0\n"]
     expected_result = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0]]
 
-    result = process_data(data)
+    result = process_traffic_light_data(data)
 
     assert result == expected_result, f"Expected {expected_result}, however result is {result}."
 
