@@ -1,5 +1,5 @@
 import pytest
-from traffic_light_data_analyzer import process_data, analyze_traffic_light
+from analyze_traffic_light_analyzer import process_data, analyze_traffic_light
 
 
 # Test for process_data()
