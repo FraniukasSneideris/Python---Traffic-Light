@@ -44,4 +44,4 @@ def analyze_traffic_light(traffic_light_data):
     print("Traffic light works!")
 
 if __name__ == "__main__":
-    main('traffic_light_data_file.txt')
+    main('traffic_light_data.txt')
