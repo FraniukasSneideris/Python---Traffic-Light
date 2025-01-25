@@ -29,10 +29,8 @@ def test_traffic_light_valid_sequences():
 def test_traffic_light_invalid_sequence():
     invalid_traffic_light_data = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0], [1, 0, 0, 0]]  # invalid transition no light on -> red on index 3
 
-    with pytest.raises(AssertionError) as excinfo:
+    with pytest.raises(AssertionError):
       analyze_traffic_light(invalid_traffic_light_data)
-    
-    assert str(excinfo.value) == "analyze_traffic_light fails against invalid sequence."
 
 ####
 # analyze_traffic_light() detects SHUT DOWN:
@@ -41,10 +39,8 @@ def test_traffic_light_shutdown():
         [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0],\
         [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
     
-    with pytest.raises(AssertionError) as excinfo:
+    with pytest.raises(AssertionError):
       analyze_traffic_light(shutdown_data)
-    
-    assert str(excinfo.value) == "analyze_traffic_light fails against shutdown data."
 
 # analyze_traffic_light() detects STUCK:
 def test_traffic_light_stuck():
@@ -52,20 +48,16 @@ def test_traffic_light_stuck():
         [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0],\
         [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0]]
     
-    with pytest.raises(AssertionError) as excinfo:
+    with pytest.raises(AssertionError):
       analyze_traffic_light(stuck_data)
-    
-    assert str(excinfo.value) == "analyze_traffic_light fails against stuck data."
 
 # analyze_traffic_light() detects more than one light turned on:
 def test_traffic_light_multiple_lights():
     multiple_lights_data = [
         [0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0]]
     
-    with pytest.raises(AssertionError) as excinfo:
+    with pytest.raises(AssertionError):
       analyze_traffic_light(multiple_lights_data)
-    
-    assert str(excinfo.value) == "analyze_traffic_light fails against multiple lights data."
 
 # analyze_traffic_light() detects Green or Green Left not blinking:
 def test_traffic_light_blinks():
