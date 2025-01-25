@@ -14,23 +14,23 @@ rule_set = {
 
 # code_to_color dictionary for multiple lights
 code_to_color = {
-    tuple([1,1,0,0]):"RED + YELLOW", tuple([1,0,1,0]):"RED + GREEN", tuple([1,0,0,1]):"RED + GREEN LEFT", \
-    tuple([0,1,1,0]):"YELLOW + GREEN", tuple([0,1,0,1]):"YELLOW + GREEN LEFT", tuple([0,0,1,1]):"GREEN + GREEN LEFT", \
-    tuple([1,1,1,0]):"RED + YELLOW + GREEN", tuple([0,1,1,1]):"YELLOW + GREEN + GREEN LEFT", tuple([1,1,1,1]):"ALL LIGHTS ON", \
-    tuple([0,0,0,0]):"No Light On", tuple([1,0,0,0]):"Red", tuple([0,1,0,0]):"Yellow", tuple([0,0,1,0]):"Green", tuple([0,0,0,1]):"Green Left"
+    tuple([1, 1, 0, 0]):"RED + YELLOW", tuple([1, 0, 1, 0]):"RED + GREEN", tuple([1, 0, 0, 1]):"RED + GREEN LEFT", \
+    tuple([0, 1, 1, 0]):"YELLOW + GREEN", tuple([0, 1, 0, 1]):"YELLOW + GREEN LEFT", tuple([0, 0, 1, 1]):"GREEN + GREEN LEFT", \
+    tuple([1, 1, 1, 0]):"RED + YELLOW + GREEN", tuple([0, 1, 1, 1]):"YELLOW + GREEN + GREEN LEFT", tuple([1, 1, 1, 1]):"ALL LIGHTS ON", \
+    tuple([0, 0, 0, 0]):"No Light On", tuple([1, 0, 0, 0]):"Red", tuple([0, 1, 0, 0]):"Yellow", tuple([0, 0, 1, 0]):"Green", tuple([0, 0, 0, 1]):"Green Left"
 }
 
 # Defining color string only for when repeated states or shut down
 code_to_stuck_color = {
-    tuple([0,0,0,0]):"SHUT DOWN",
-    tuple([1,0,0,0]):"STUCK in Red",
-    tuple([0,1,0,0]):"STUCK in Yellow",
-    tuple([0,0,1,0]):"STUCK in Green",
-    tuple([0,0,0,1]):"STUCK in Green Left",
+    tuple([0, 0, 0, 0]):"SHUT DOWN",
+    tuple([1, 0, 0, 0]):"STUCK in Red",
+    tuple([0, 1, 0, 0]):"STUCK in Yellow",
+    tuple([0, 0, 1, 0]):"STUCK in Green",
+    tuple([0, 0, 0, 1]):"STUCK in Green Left",
 }
 
 # Defining greens list for testing if greens blink correctly
-greens = [tuple([0,0,1,0]), tuple([0,0,0,1])]
+greens = [tuple([0, 0, 1, 0]), tuple([0, 0, 0, 1])]
 
 ## MAIN
 def main(file):
