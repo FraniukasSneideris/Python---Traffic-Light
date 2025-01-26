@@ -71,23 +71,23 @@ def analyze_traffic_light(traffic_light_data):
 
         # Detects more than one light at the same time
         assert sum(current_state) <= 1 and sum(next_state) <= 1, \
-            f"Attention! More than one light turned on near index {i}: traffic light went from {code_to_color.get(current_state, [])} to {code_to_color.get(next_state, [])}."
+            f"Attention! More than one light turned on near index {i}: traffic light went from {code_to_color.get(current_state, 'UNKNOWN')} to {code_to_color.get(next_state, 'UNKNOWN')}."
     
         # Detects invalid transitions
-        assert next_state in rule_set.get(current_state, []), \
-            f"Traffic light does not work. Invalid transition detected at index {i}: transition from {code_to_color.get(current_state, [])} to {code_to_color.get(next_state, [])}."
+        assert next_state in rule_set.get(current_state, 'UNKNOWN'), \
+            f"Traffic light does not work. Invalid transition detected at index {i}: transition from {code_to_color.get(current_state, 'UNKNOWN')} to {code_to_color.get(next_state, 'UNKNOWN')}."
 
         # Detects if traffic light gets stuck or shuts down
         if current_state == next_state:
             light_count += 1
-            assert light_count < stuck_threshold, f"Attention! The traffic light is {code_to_stuck_color.get(current_state, [])}!"
+            assert light_count < stuck_threshold, f"Attention! The traffic light is {code_to_stuck_color.get(current_state, 'UNKNOWN')}!"
         else:
             light_count = 0
 
         # Detects green light not blinking
         if current_state in greens and current_state == next_state:
             green_count += 1
-            assert green_count <= max_greens, f"Attention! {code_to_color.get(current_state, [])} is not blinking."
+            assert green_count <= max_greens, f"Attention! {code_to_color.get(current_state, 'UNKNOWN')} is not blinking."
         else:
             green_count = 0
 
