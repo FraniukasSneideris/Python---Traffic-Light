@@ -61,7 +61,6 @@ max_greens = 6
 
 # Testing the traffic light
 def analyze_traffic_light(traffic_light_data):
-    no_light_on_count = 0
     light_count = 0
     green_count = 0
 
