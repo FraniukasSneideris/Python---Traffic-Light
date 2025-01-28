@@ -62,7 +62,8 @@ Pytest script was included (analyze_traffic_light_pytest.py), which checks all t
 5. To run the main script (analyze_traffic_light.py), use the following command:  
    python analyze_traffic_light.py traffic_light_data.txt
 6. Press Enter to execute the program.
-7. To run the pytest script (analyze_traffic_light_pytest.py) repeat steps 5 and 6, but change the command to *python analyze_traffic_light_pytest.py*.
+7. To run the pytest script (analyze_traffic_light_pytest.py) repeat steps 5 and 6, but change the command to:
+   *python analyze_traffic_light_pytest.py*.
 
 ### Results:
 Given the data sample (traffic_light_data.txt) we can conclude that the traffic light works correctly. 
