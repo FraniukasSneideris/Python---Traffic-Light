@@ -74,7 +74,7 @@ def analyze_traffic_light(traffic_light_data):
     
         # Detects invalid transitions
         assert next_state in rule_set.get(current_state, 'UNKNOWN'), \
-            f"Traffic light does not work. Invalid transition detected at index {i}: transition from {code_to_color.get(current_state, 'UNKNOWN')} to {code_to_color.get(next_state, 'UNKNOWN')}."
+            f"Attention! Invalid transition detected at index {i}: transition from {code_to_color.get(current_state, 'UNKNOWN')} to {code_to_color.get(next_state, 'UNKNOWN')}."
 
         # Detects if traffic light gets stuck or shuts down
         if current_state == next_state:
