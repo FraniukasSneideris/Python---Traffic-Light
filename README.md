@@ -59,10 +59,11 @@ Pytest script was included (analyze_traffic_light_pytest.py), which checks all t
    - `traffic_light_data.txt`  
 2. Open your preferred **IDE (Integrated Development Environment)**.
 4. Open a new terminal and make sure you are in the directory where the files have been saved.
-5. To run the main script (analyze_traffic_light.py), use the following command:  
+5. To run the main script (analyze_traffic_light.py), use the following command:
+
    python analyze_traffic_light.py traffic_light_data.txt
-6. Press Enter to execute the program.
-7. To run the pytest script (analyze_traffic_light_pytest.py) repeat steps 5 and 6, but change the command to:
+7. Press Enter to execute the program.
+8. To run the pytest script (analyze_traffic_light_pytest.py) repeat steps 5 and 6, but change the command to:
 
    *python analyze_traffic_light_pytest.py*.
 
