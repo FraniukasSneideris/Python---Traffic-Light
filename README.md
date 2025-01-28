@@ -59,9 +59,17 @@ Pytest script was included (analyze_traffic_light_pytest.py), which checks all t
    - `traffic_light_data.txt`  
 2. Open your preferred **IDE (Integrated Development Environment)**.
 4. Open a new terminal and make sure you are in the directory where the files have been saved.
-5. Run the following command:  
+5. To run the main script (analyze_traffic_light.py), use the following command:  
    python analyze_traffic_light.py traffic_light_data.txt
 6. Press Enter to execute the program.
+7. To run the pytest script (analyze_traffic_light_pytest.py) repeat steps 5 and 6, but change the command to *python analyze_traffic_light_pytest.py*.
 
 ### Results:
 Given the data sample (traffic_light_data.txt) we can conclude that the traffic light works correctly. 
+
+### Testing the code a little bit more:
+If you would like to run the script with more files, and check the results with tampered data (multiple colors, traffic light off, etc), you can go to the branch "Tampered-data", download the files, and check the results you get when running the main script with those files. 
+The instructions are the same, but the command will change depending on the file you use, ie:
+*python analyze_traffic_light.py tampered_xxxxx.txt*
+
+If you would like to see the first version of the code, which ONLY can detect if there are invalid transitions or if the traffic light works and doesn't have CLI, you can check the "First-code- branch.
