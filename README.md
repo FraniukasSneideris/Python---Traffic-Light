@@ -36,13 +36,32 @@ The analysis needs to be done using Python.
 The general idea of the code is the following:
   1) Open the data accordingly, process it and convert it to a list.
   2) Define a rule dictionary which contains the valid transitions based on the acceptable sequences of a working traffic light.
-  3) Define a for loop function which compares the data with the valid transitions, and therefore determines if the traffic light works.  
+  3) Define a for loop function which compares the data with the valid transitions, and therefore determines if the traffic light works. This loop will also include edge scenarios, like multiple lights turned on at the same time, traffic light off or stuck in a particular light, green lights not blinking or if the binary color code data is unknown (for example 0,1,5,J). 
 
 ## The Code
-This code is a for loop function which compares the data with a dictionary containing the possible light switches (based on the correct patterns defined before), and returns either "Traffic light works" or "Traffic light does not work", and if the traffic light does not work, it also returns the index and color codes of the invalid transition found. 
+The main script ("analyze_traffic_light.py) is a for loop function, whith Common-Line Interface, which compares the data with a dictionary containing the possible light switches (based on the correct patterns defined before), and returns either "Traffic light works" or an AssertionError with a customed message that tells you what the error is:
 
-**PLEASE NOTE**: The "analyze_traffic_light_pytest.py" file requires of previous pytest module installation to run. 
-To install pytest, please enter "!pip install pytest" and run it.
+- If more than one lights are on, it returns: "Attention! More than one light turned on near index {i}: traffic light went from {current_color} to {next_color}.
+- If there is an invalid transition (for example from green to red), it returns: "Attention! Invalid transition detected at index {i}: transition from {current_color)} to {next_color}."
+- If the traffic light gets stuck in a particular light, it returns: ""Attention! The traffic light is STUCK in {current_color}!"
+- If the traffic light shuts down, it returns: ""Attention! The traffic light is SHUT DOWN!"
+- If the green or green left lights stop blinking, it returns: "Attention! {green or green_left} is not blinking."
+- If an unknown binary code is detected (for example 0,1,5,J) current_code/next_code will be replaced by UNKNOWN, for example: "Attention! More than one light turned on near index {i}: traffic light went from {current_color} to {UNKNOWN}.
 
-## Results:
-Given the data sample (traffic_light_data)  we can conclude that the traffic light works correctly. 
+Pytest script was included (analyze_traffic_light_pytest.py), which checks all the conditions and functionalities of the main script. 
+
+**PLEASE NOTE**: This file requires of previous pytest module installation to run. To install pytest, please enter "!pip install pytest" and run it.
+
+## How to Use the Code:
+1. Download the following files and save them in the same folder:  
+   - `analyze_traffic_light.py`  
+   - `analyze_traffic_light_pytest.py`  
+   - `traffic_light_data.txt`  
+2. Open your preferred **IDE (Integrated Development Environment)**.
+4. Open a new terminal and make sure you are in the directory where the files have been saved.
+5. Run the following command:  
+   python analyze_traffic_light.py traffic_light_data.txt
+6. Press Enter to execute the program.
+
+### Results:
+Given the data sample (traffic_light_data.txt) we can conclude that the traffic light works correctly. 
