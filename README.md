@@ -49,7 +49,7 @@ The main script ("analyze_traffic_light.py) is a for loop function, whith Common
 - If an unknown binary code is detected (for example 0,1,5,J) current_code/next_code will be replaced by UNKNOWN, for example: "Attention! More than one light turned on near index {i}: traffic light went from {current_color} to {UNKNOWN}.
 
 Pytest script was included (analyze_traffic_light_pytest.py), which checks all the conditions and functionalities of the main script. 
-**PLEASE NOTE**: This file requires of previous pytest module installation to run. To install pytest, please enter "!pip install pytest" and run it.
+**PLEASE NOTE**: This file requires of previous pytest module installation to run. To install pytest, please enter "pip install pytest" and run it.
 
 ## How to Use the Code:
 1. Download the following files and save them in the same folder:  
