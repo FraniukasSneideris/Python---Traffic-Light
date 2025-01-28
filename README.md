@@ -73,6 +73,6 @@ Given the data sample (traffic_light_data.txt) we can conclude that the traffic 
 ### Testing the code a little bit more:
 If you would like to run the script with more files, and check the results with tampered data (multiple colors, traffic light off, etc), you can go to the branch "Tampered-data", download the files, and check the results you get when running the main script with those files. 
 The instructions are the same, but the command will change depending on the file you use, ie:
-*python analyze_traffic_light.py tampered_xxxxx.txt*
+*python analyze_traffic_light.py tampered_data_xxxxx.txt*
 
 If you would like to see the first version of the code, which ONLY can detect if there are invalid transitions or if the traffic light works and doesn't have CLI, you can check the "First-code- branch.
