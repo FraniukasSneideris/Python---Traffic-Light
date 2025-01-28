@@ -63,6 +63,7 @@ Pytest script was included (analyze_traffic_light_pytest.py), which checks all t
    python analyze_traffic_light.py traffic_light_data.txt
 6. Press Enter to execute the program.
 7. To run the pytest script (analyze_traffic_light_pytest.py) repeat steps 5 and 6, but change the command to:
+
    *python analyze_traffic_light_pytest.py*.
 
 ### Results:
