@@ -74,4 +74,4 @@ If you would like to run the script with more files, and check the results with 
 The instructions are the same, but the command will change depending on the file you use, ie:
 *python analyze_traffic_light.py tampered_data_xxxxx.txt*
 
-If you would like to see the first version of the code, which ONLY can detect if there are invalid transitions or if the traffic light works, you can check the "First-code" branch.
+If you would like to see the first version of the code, which ONLY can detect if there are invalid transitions or if the traffic light works, you can check out the "First-code" branch.
